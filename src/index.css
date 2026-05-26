@@ -1,0 +1,75 @@
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #0f0f0f;
+  --surface:   #1a1a1a;
+  --surface2:  #222222;
+  --border:    #2e2e2e;
+  --text:      #f0f0f0;
+  --muted:     #888;
+  --accent:    #e24b4a;
+
+  --cat-food:    #E24B4A;
+  --cat-trans:   #EF9F27;
+  --cat-fun:     #7F77DD;
+  --cat-edu:     #378ADD;
+  --cat-health:  #1D9E75;
+  --cat-other:   #888780;
+
+  --cat-food-bg:   #2a1515;
+  --cat-trans-bg:  #2a1f0a;
+  --cat-fun-bg:    #1a1830;
+  --cat-edu-bg:    #0f1e30;
+  --cat-health-bg: #0d2018;
+  --cat-other-bg:  #1e1e1c;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+input, select, button {
+  font-family: inherit;
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 9px 12px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+input:focus, select:focus {
+  border-color: var(--accent);
+}
+
+select option {
+  background: var(--surface2);
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
